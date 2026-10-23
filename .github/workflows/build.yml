@@ -1,0 +1,33 @@
+name: Build Caixa de Desejo (.exe)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Gerar o executável portátil
+        run: npm run build
+
+      - name: Publicar artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: CaixaDeDesejo-exe
+          path: dist/CaixaDeDesejo.exe
+          if-no-files-found: error
+          retention-days: 14
