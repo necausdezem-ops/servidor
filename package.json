@@ -5,7 +5,10 @@
   "main": "main.js",
   "author": "Cris",
   "scripts": {
+    "prepare-html": "node prepare-html.js",
+    "prestart": "node prepare-html.js",
     "start": "electron .",
+    "prebuild": "node prepare-html.js",
     "build": "electron-builder --win portable --publish never"
   },
   "dependencies": {
