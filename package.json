@@ -1,0 +1,32 @@
+{
+  "name": "caixa-de-desejo",
+  "version": "1.1.0",
+  "description": "Sandbox FPS 3D onde os desejos viram realidade (Ollama local)",
+  "main": "main.js",
+  "author": "Cris",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable --publish never"
+  },
+  "dependencies": {
+    "three": "0.128.0"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.cris.caixadedesejo",
+    "productName": "Caixa de Desejo",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "node_modules/three/build/three.min.js"
+    ],
+    "win": {
+      "target": "portable",
+      "artifactName": "CaixaDeDesejo.exe"
+    }
+  }
+}
