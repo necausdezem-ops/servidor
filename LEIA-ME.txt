@@ -1,0 +1,25 @@
+CAIXA DE DESEJO — versão PC com Ollama local
+
+GERAR O EXECUTÁVEL PORTÁTIL
+1. No GitHub, abra Actions.
+2. Selecione "Build Caixa de Desejo (.exe)" e clique em Run workflow.
+3. Quando terminar, abra a execução verde e baixe o artefato "CaixaDeDesejo-exe". Ele contém CaixaDeDesejo.exe.
+
+O build também é iniciado automaticamente quando há um push para main.
+
+NO PC QUE VAI JOGAR
+1. Instale o Ollama: https://ollama.com
+2. No terminal, execute: ollama pull llama3.2
+   (alternativas: ollama pull qwen2.5:3b ou outro modelo compatível; informe o nome na caixa de desejo).
+3. Deixe o Ollama rodando e abra CaixaDeDesejo.exe.
+
+CONTROLES
+WASD anda, mouse olha, clique atira, Espaço pula, M abre a Caixa de Desejo, 1–9 troca de arma e F11 alterna tela cheia.
+Sem Ollama, o jogo usa o interpretador básico.
+
+RODAR A PARTIR DO CÓDIGO-FONTE (com Node.js instalado)
+npm install
+npm start
+
+NOVIDADES v1.1
+Buraco negro, clones que se dividem, teleporte, gravidade zero/negativa, quicar, rastro brilhante, crescer, explosões maiores/menores, escopeta, cadência e velocidade dos tiros e chuva de itens. O interpretador básico também reconhece vários desses efeitos.
