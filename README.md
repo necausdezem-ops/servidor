@@ -16,3 +16,6 @@ O workflow também roda automaticamente a cada push em `main`.
 - Controles: WASD, mouse, clique para atirar, Espaço para pular, M para abrir a Caixa de Desejo, 1–9 para trocar armas, F11 para tela cheia.
 
 Sem Ollama, o jogo usa o interpretador básico. Para rodar pelo código-fonte: `npm install` e `npm start`.
+
+## Compilação
+O build é feito em um runner Windows do GitHub Actions, sem exigir ferramentas de desenvolvimento instaladas no PC do jogador.
